@@ -5,7 +5,7 @@ import { Container, Row, Button } from "react-bootstrap";
 import "./FeaturedProduct.css";
 import { featuredProductData } from "../../../dummyData";
 
-const FeaturedProduct = () => {
+const FeaturedProduct = ({arrayIndex}) => {
 //   const [sidebarCats, setSidebarCats] = useState([]);
 
 //   useEffect(() => {
@@ -13,13 +13,13 @@ const FeaturedProduct = () => {
 //   }, []);
 
   return (
-    <Container>
+    <Container className="featuredProductWrapper">
         <Row>
             <div xs="12" sm="6" className="text-left w-50 px-2"
                     style={{
-                order: `${featuredProductData[0].order}`
+                order: `${featuredProductData[arrayIndex].order}`
             }}>
-                <h3>{featuredProductData[0].title}</h3>
+                <h3>{featuredProductData[arrayIndex].title}</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dictum felis eu pede mollis pretium.<br/><br/>
                     Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br/><br/>

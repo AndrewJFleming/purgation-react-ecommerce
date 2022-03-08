@@ -387,7 +387,7 @@ export const cartData = [
       createdAt: "2022-01-06T23:46:44.624+00:00",
       updatedAt: { $date: { $numberLong: "1641512804624" } },
       __v: { $numberInt: "0" },
-      order: 2,
+      order: 0,
     },
     {
       _id: "61d77f9d176c7a0bf3cfe5e1",

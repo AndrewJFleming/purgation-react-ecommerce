@@ -1,0 +1,12 @@
+.blockquoteContainer {
+    background-color: #a6b29f;
+    color: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+.blockquoteContainer blockquote {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 2.5rem;
+}
