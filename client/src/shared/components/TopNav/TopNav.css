@@ -1,0 +1,49 @@
+.navbar {
+  background-color: #263233;
+  font-family: "Open Sans", sans-serif;
+}
+
+.myResponsive {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .avatar-link {
+  text-decoration: none;
+  color: #daa520 !important;
+}
+.avatar-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+.avatar {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0;
+  padding: 4px 0;
+} */
+
+.positive-cart {
+  color: white !important;
+}
+
+.nav-cart-link {
+  text-decoration: none;
+}
+.nav-cart-link i {
+  margin: 5px 0;
+}
+
+.navSearch {
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .myResponsive {
+    display: block;
+  }
+  .navSearch {
+    margin: 5px 0;
+  }
+}
