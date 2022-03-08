@@ -376,4 +376,30 @@ export const cartData = [
       __v: { $numberInt: "0" },
     },
   ];
+  export const featuredProductData = [
+    {
+      _id: "61d77f64176c7a0bf3cfe5df",
+      title: "Paradiso",
+      desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et",
+      img: "https://live.staticflickr.com/65535/51875952416_fef4f49ed1_o.jpg",
+      isSlide: true,
+      isFeatured: false,
+      createdAt: "2022-01-06T23:46:44.624+00:00",
+      updatedAt: { $date: { $numberLong: "1641512804624" } },
+      __v: { $numberInt: "0" },
+      order: 2,
+    },
+    {
+      _id: "61d77f9d176c7a0bf3cfe5e1",
+      title: "Capriccio",
+      desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et",
+      img: "https://live.staticflickr.com/65535/51875952361_90bd3c9ff2_o.jpg",
+      isSlide: false,
+      isFeatured: true,
+      createdAt: "2022-01-06T23:47:41.199+00:00",
+      updatedAt: { $date: { $numberLong: "1641512861199" } },
+      __v: { $numberInt: "0" },
+      order: 2,
+    },
+  ];
   
