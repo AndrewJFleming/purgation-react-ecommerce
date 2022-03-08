@@ -1,0 +1,8 @@
+.sidebarLink {
+    color: #727272;
+    text-decoration: none;
+}
+.sidebarLink:hover {
+    color: #727272;
+    text-decoration: underline;
+}

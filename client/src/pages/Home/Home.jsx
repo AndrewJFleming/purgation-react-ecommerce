@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
+import Sidebar from "../../shared/components/Sidebar/Sidebar";
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
               Left
             </Col>
             <Col xs="12" sm="2" md="4" className="text-center">
-              Right
+              <Sidebar />
             </Col>
           </Row>
       </Container>
