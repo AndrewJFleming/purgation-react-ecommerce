@@ -1,0 +1,15 @@
+.sidebar-featured-products-wrapper {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.sidebar-featured-products-list {
+    margin: 2rem 0;
+}
+
+.featured-product-image {
+    width: 36px;
+    height: 36px;
+    float: right;
+    object-fit: cover;
+}
