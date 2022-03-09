@@ -25,10 +25,14 @@ const FeaturedProduct = ({arrayIndex}) => {
                     Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.<br/><br/>
                     Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
                 </p>
-                <Button as={Link} to="#" variant="dark">Explore</Button>
+                <Link to={`/product/${featuredProductData[arrayIndex]._id}`} className="productList-card-link">
+                    <button
+                    className="productList-card-button"
+                    >Explore</button>
+                </Link>
             </div>
             <div xs="12" sm="6" className="w-50 px-2">
-                <img className="w-100" src={featuredProductData[arrayIndex].img} />
+                <img className="w-100" src={featuredProductData[arrayIndex].img} alt={`${featuredProductData[arrayIndex].title}-featured-product-showcase`} />
             </div>
         </Row>
     </Container>
