@@ -6,10 +6,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 font-family: 'Source Sans Pro', sans-serif;
+background-color: #f9fff6;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Libre Baskerville', serif;
+}
+
+/*
+Prevent whitespace exposure below footer while content is loading. 
+*/
+.minimum-height {
+  min-height: 60vh;
 }
 
 code {

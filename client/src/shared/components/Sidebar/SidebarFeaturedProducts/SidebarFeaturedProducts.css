@@ -13,3 +13,25 @@
     float: right;
     object-fit: cover;
 }
+
+.sidebar-featured-product {
+    margin: 15px 0;
+}
+.sidebar-featured-product a {
+    color: #727272;
+    text-decoration: underline;
+}
+.sidebar-featured-product a:hover {
+    color: #1f1f1f;
+    text-decoration: none;
+}
+
+.sidebar-featured-product p {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 991px) {
+    .featured-product-image {
+        float: left;
+    }
+  }

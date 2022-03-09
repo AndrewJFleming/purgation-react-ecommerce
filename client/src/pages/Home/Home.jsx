@@ -5,11 +5,12 @@ import Sidebar from "../../shared/components/Sidebar/Sidebar";
 import FeaturedProduct from "./FeaturedProduct/FeaturedProduct";
 import BlockQuote from "./BlockQuote/BlockQuote";
 import Products from '../../components/Products/Products'
+import headerBG from "../../images/headerBGImage.jpg";
 
 const Home = () => {
 
   return (
-    <div className="minimum-height">
+    <div className="minimum-height" >
         <Container className="my-5">
           <Row>
             <Col xs="12" sm="10" className="text-center">

@@ -17,12 +17,15 @@ const SidebarFeaturedProducts = () => {
       <hr/>
       <div className="sidebar-featured-products-list">
         {featProducts.slice(2, 8).map((p) => (
-          <div>
-              <img className="featured-product-image" src={p?.img} />
+          <div className="sidebar-featured-product">
+            <img className="featured-product-image" src={p?.img} />
             <Link to={`/product/${p?.productId}`} key={p._id}>
-              {p?.title}<br/>
+              <p>
+                {p?.title}
+              </p>
             </Link>
             ${p?.price}
+            <hr/>
           </div>
         ))}
       </div>
