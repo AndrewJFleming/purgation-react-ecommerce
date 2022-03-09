@@ -28,7 +28,7 @@ const FeaturedProduct = ({arrayIndex}) => {
                 <Button as={Link} to="#" variant="dark">Explore</Button>
             </div>
             <div xs="12" sm="6" className="w-50 px-2">
-                <img className="w-100" src="https://images.unsplash.com/photo-1646704773108-ff5d7f116249?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="feat-img"/>
+                <img className="w-100" src={featuredProductData[arrayIndex].img} />
             </div>
         </Row>
     </Container>
