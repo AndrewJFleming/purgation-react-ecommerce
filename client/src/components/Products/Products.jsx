@@ -38,7 +38,7 @@ console.log(productData)
   return (
     <Row className="mt-5">
       {products.slice(0, 8).map((item) => (
-            <Col xs={12} sm={6} md={4} lg={3} key={item._id}>
+            <Col xs={6} md={4} lg={3} key={item._id}>
               <Product product={item} />
             </Col>
           ))}

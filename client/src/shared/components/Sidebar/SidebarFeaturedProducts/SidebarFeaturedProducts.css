@@ -35,3 +35,12 @@
         float: left;
     }
   }
+
+@media screen and (max-width: 767px) {
+    .featured-product-image {
+        float: right;
+    }
+}
+
+/* @media screen and (max-width: 575px) {
+} */

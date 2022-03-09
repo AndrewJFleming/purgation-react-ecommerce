@@ -15,17 +15,16 @@ const SidebarProductCategories = () => {
     <div className="sidebar-wrapper">
       <h6>Product Categories</h6>
       <hr/>
-      <ul>
           {sidebarCats?.map((cat) => (
               <Link to={`/product-list/${cat.title}`} className="sidebarLink">
-                  <li
-                      key={`${cat.title}-sidebarItem`}
+                  <div  className="sidebar-cat-item"
+                    key={`${cat.title}-sidebarItem`}
                   >
+                      <i className="fad fa-folder sidbar-cat-icon"></i>
                       {cat.title}
-                  </li>
+                  </div>
               </Link>
           ))}
-      </ul>
     </div>
   );
 };

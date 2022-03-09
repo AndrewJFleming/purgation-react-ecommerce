@@ -13,7 +13,7 @@ const SidebarFeaturedProducts = () => {
 
   return (
     <div className="sidebar-featured-products-wrapper">
-      <h6>Product Categories</h6>
+      <h6>Featured Products</h6>
       <hr/>
       <div className="sidebar-featured-products-list">
         {featProducts.slice(2, 8).map((p) => (
