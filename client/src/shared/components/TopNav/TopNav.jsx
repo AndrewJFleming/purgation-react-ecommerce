@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+import {
+  Container,
+  Navbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 import NavLogo from "../../../images/logoOutline.png";
 import headerBG from "../../../images/headerBGImage.jpg";
 import { categoryData } from "../../../dummyData";
@@ -16,9 +24,9 @@ const TopNav = ({ currentUser }) => {
     setExpanded(false);
   };
 
-  // useEffect(() => {
-  //   setTopNavCats(categoryData);
-  // }, []);
+  useEffect(() => {
+    setTopNavCats(categoryData);
+  }, []);
 
   return (
     <Navbar
@@ -27,6 +35,7 @@ const TopNav = ({ currentUser }) => {
       expand="lg"
       variant="dark"
       style={{
+        padding: "2rem 0",
         background: `url(${headerBG})`,
       }}
     >
@@ -45,37 +54,85 @@ const TopNav = ({ currentUser }) => {
         />
       </Container>
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Container className="d-flex justify-content-between">
-          <div className="desktop-nav-logo">
-            <Link to="#">
-              <img
-                src={NavLogo}
-                height="30"
-                className="d-inline-block align-top"
-                alt="site logo"
-              />
-              <span className="pl-1">Purgation</span>
-            </Link>
-          </div>
-          <div className="nav-items-top">
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </div>
-          <div>
-            <input type="text" id="nav-search" name="search" />
-          </div>
+        <Container className="pb-4 d-flex justify-content-between">
+          <Navbar.Brand
+            as={Link}
+            to="/"
+            onClick={handleCollapse}
+            className="desktop-nav-logo"
+          >
+            <img
+              src={NavLogo}
+              height="40"
+              className="d-inline-block align-top"
+              alt="site logo"
+            />
+            <p className="pl-1 ">
+              <span className="nav-logo-text-prim">Purgation</span>
+              <br />
+              <span className="nav-logo-text-sec">ecommerce</span>
+            </p>
+          </Navbar.Brand>
+
+          <Nav className="page-nav-links">
+            <Nav.Link as={Link} to="/login" onClick={handleCollapse}>
+              Login
+            </Nav.Link>
+            <Nav.Link as={Link} to="/register" onClick={handleCollapse}>
+              Register
+            </Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <FormControl
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+          </Form>
         </Container>
         <Container className="d-flex justify-content-between">
-          <div className="nav-items-bottom">
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
-          </div>
-          <div>
-            <i className="fas fa-shopping-basket nav-cart-icon"></i>
-          </div>
+          <Nav>
+            <NavDropdown title="Categories" id="basic-nav-dropdown">
+              {topNavCats?.map((cat) => (
+                <NavDropdown.Item
+                  key={`${cat.title}-navItem`}
+                  as={Link}
+                  to={`/product-list/${cat.title}`}
+                  onClick={handleCollapse}
+                >
+                  {cat.title}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+            <NavDropdown title="Categories" id="basic-nav-dropdown">
+              {topNavCats?.map((cat) => (
+                <NavDropdown.Item
+                  key={`${cat.title}-navItem`}
+                  as={Link}
+                  to={`/product-list/${cat.title}`}
+                  onClick={handleCollapse}
+                >
+                  {cat.title}
+                </NavDropdown.Item>
+              ))}
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link
+              className="nav-cart-link nav-link"
+              as={Link}
+              to="/cart"
+              onClick={handleCollapse}
+            >
+              <span className={`${cartCount && "positive-cart"}`}>
+                <i className="fas fa-shopping-basket"></i>
+                &nbsp;({cartCount})
+              </span>
+            </Nav.Link>
+          </Nav>
         </Container>
       </Navbar.Collapse>
-      {/* </nav> */}
     </Navbar>
   );
 };

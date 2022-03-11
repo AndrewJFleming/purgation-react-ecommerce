@@ -1,21 +1,50 @@
-.top-navbar {
-  font-family: "Open Sans", sans-serif;
+.nav-logo-text-prim {
+  font-family: "Libre Baskerville", serif;
+  color: #ecffe1 !important;
+  text-decoration: underline;
+}
+
+.nav-logo-text-sec {
+  font-family: "Libre Baskerville", serif;
+  color: #ecffe1 !important;
+  font-size: small;
+  top: 30px;
+  position: absolute;
+}
+
+.nav-link {
+  color: #ecffe1 !important;
 }
 
 .navbar {
   display: block !important;
+  padding: 20px 0;
+  font-family: "Open Sans", sans-serif;
 }
 
+.desktop-nav-logo {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+/*
+Uses different icon for mobile screens; hidden for larger screens.
+*/
 .mobile-container {
   display: none !important;
 }
 
-.nav-cart-icon {
-  color: red;
+.nav-cart-link {
+  color: #ffb4b7 !important;
 }
 
 .navbar-collapse {
   flex-direction: column;
+}
+
+.page-nav-links {
+  font-size: small;
 }
 
 @media screen and (max-width: 991px) {
@@ -25,14 +54,5 @@
 
   .desktop-nav-logo {
     display: none;
-  }
-
-  .nav-items-top {
-    display: flex;
-    flex-direction: column;
-  }
-  .nav-items-bottom {
-    display: flex;
-    flex-direction: column;
   }
 }
