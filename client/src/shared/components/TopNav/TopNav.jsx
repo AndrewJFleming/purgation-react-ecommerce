@@ -11,6 +11,7 @@ import {
   Button,
 } from "react-bootstrap";
 import NavLogo from "../../../images/logoOutline.png";
+import NavLogoWide from "../../../images/logo-wide.png";
 import headerBG from "../../../images/headerBGImage.jpg";
 import { categoryData } from "../../../dummyData";
 import "./TopNav.css";
@@ -42,7 +43,7 @@ const TopNav = ({ currentUser }) => {
       <Container className="d-flex justify-content-between mobile-container">
         <Link to="#">
           <img
-            src={NavLogo}
+            src={NavLogoWide}
             height="50"
             className="d-inline-block align-top"
             alt="site logo mobile"
@@ -54,7 +55,7 @@ const TopNav = ({ currentUser }) => {
         />
       </Container>
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Container className="pb-4 d-flex justify-content-between">
+        <Container className="py-2 d-flex justify-content-between">
           <Navbar.Brand
             as={Link}
             to="/"

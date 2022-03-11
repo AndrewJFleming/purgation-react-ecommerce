@@ -7,8 +7,8 @@ import Product from "./Product/Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
-//   const [productsProcessed, setProductsProcessed] = useState([]);
-//   const [filteredProducts, setFilteredProducts] = useState([]);
+  //   const [productsProcessed, setProductsProcessed] = useState([]);
+  //   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
     const getProducts = async () => {
@@ -19,7 +19,6 @@ const Products = () => {
         setProducts(res.data);
       } catch (err) {
         console.log(err);
-        console.log(process.env.REACT_APP_SERVER_URL);
       }
     };
     getProducts();
@@ -28,10 +27,10 @@ const Products = () => {
   return (
     <Row className="mt-5">
       {products.slice(0, 8).map((item) => (
-            <Col xs={6} md={4} lg={3} key={item._id}>
-              <Product product={item} />
-            </Col>
-          ))}
+        <Col xs={6} md={4} lg={3} key={item._id}>
+          <Product product={item} />
+        </Col>
+      ))}
     </Row>
   );
 };
