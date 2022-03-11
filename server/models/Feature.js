@@ -8,6 +8,7 @@ const FeatureSchema = mongoose.Schema(
     img: { type: String, required: true },
     price: { type: Number, required: true },
     isActive: { type: Boolean, default: false },
+    order: { type: Number, default: 0 },
   },
   { timestamps: true }
 );
