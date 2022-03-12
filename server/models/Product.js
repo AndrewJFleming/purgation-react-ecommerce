@@ -9,6 +9,7 @@ const ProductSchema = mongoose.Schema(
     variants: { type: Array },
     price: { type: Number, required: true },
     inStock: { type: Boolean, default: true },
+    isFeatured: { type: Boolean, default: false },
   },
   { timestamps: true }
 );

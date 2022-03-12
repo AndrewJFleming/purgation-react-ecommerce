@@ -38,7 +38,7 @@ const FeaturedProduct = ({ arrayIndex }) => {
             <h3>{features[arrayIndex]?.title}</h3>
             <p>{features[arrayIndex]?.desc}</p>
             <Link
-              to={`/product/${features[arrayIndex]?._id}`}
+              to={`/product/${features[arrayIndex]?.productId}`}
               className="productList-card-link"
             >
               <button className="productList-card-button">Explore</button>

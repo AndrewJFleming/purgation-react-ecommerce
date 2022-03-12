@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 
 import productRoute from "./routes/products.js";
 import featureRoute from "./routes/features.js";
+import categoryRoute from "./routes/categories.js";
 
 const app = express();
 dotenv.config();
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 
 app.use("/products", productRoute);
 app.use("/features", featureRoute);
+app.use("/categories", categoryRoute);
 
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT || 5000;
